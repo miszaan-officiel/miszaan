@@ -20,20 +20,43 @@ body {
   background: url("images/accueil.jpg") center / cover no-repeat;
 }
 
-/* MENU ACCUEIL */
+/* MENU VERTICAL GAUCHE */
 nav {
   position: absolute;
-  top: 32px;
-  left: 48px;   
+  top: 48px;
+  left: 32px;   
   display: flex;
-  gap: 20px; /* moins d'espace entre les onglets */
+  flex-direction: column; /* vertical */
+  gap: 40px; /* espace suffisant pour respirer */
 }
 
 nav a {
   text-decoration: none;
-  font-size: 16px; /* taille compacte mais lisible */
+  font-size: 20px; /* taille originale, bien lisible */
   font-weight: normal;
-  letter-spacing: 0.18em;  
+  letter-spacing: 0.24em;
   text-transform: uppercase;
   color: #f2f2f2;
-  padding-bottom: 6p
+  padding-bottom: 6px;
+  transition: color 0.25s, text-shadow 0.25s;
+}
+
+/* Halo sur survol universel BloodBone */
+nav a:hover {
+  color: #f2f2f2;
+  text-shadow: 0 0 6px #ffffff88;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="chants-noirs.html">Chants noirs</a>
+  <a href="fragments.html">Fragments</a>
+  <a href="chroniques.html">Chroniques</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+</body>
+</html>
