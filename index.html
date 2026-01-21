@@ -1,24 +1,31 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Miszâân - Accueil</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body class="home">
+/* ===== BASE ===== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
 
-    <nav>
-        <a href="chants-noirs.html">CHANTS NOIRS</a>
-        <a href="fragments.html">FRAGMENTS</a>
-        <a href="chroniques.html">CHRONIQUES</a>
-        <a href="contact.html">CONTACT</a>
-    </nav>
+/* ===== MENU FIXE À DROITE ===== */
+nav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 30px;
+    font-weight: 600;
+    z-index: 1000;
+}
 
-    <header>
-        <h1>Bienvenue sur Miszâân</h1>
-        <p>Le monde de BloodBone vous attend.</p>
-    </header>
+nav a {
+    text-decoration: none;
+    color: #fff; /* menu blanc discret */
+    letter-spacing: 1px;
+}
 
-</body>
-</html>
+/* ===== PAGE ACCUEIL ===== */
+body.home {
+    background-image: url('accueil.jpg'); /* ton image d’accueil */
+}
