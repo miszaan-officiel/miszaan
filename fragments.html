@@ -6,34 +6,42 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
 
 <style>
-html, body { margin:0; width:100%; height:100%; }
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
 body {
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'IM Fell English SC', serif;
   background: url("images/fragments.jpg") center / cover no-repeat;
 }
 
+/* MENU VERTICAL GAUCHE */
 nav {
   position: absolute;
-  top: 32px;
-  left: 48px;
+  top: 48px;
+  left: 32px;   
   display: flex;
-  gap: 32px;
+  flex-direction: column; /* vertical */
+  gap: 40px; /* espace suffisant pour respirer */
 }
 
 nav a {
   text-decoration: none;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.22em;
+  font-size: 20px; /* taille originale */
+  font-weight: normal;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: #f2f2f2;
+  color: #f2f2f2; /* clair pour contraste */
   padding-bottom: 6px;
   transition: color 0.25s, text-shadow 0.25s;
 }
 
+/* Halo sur survol */
 nav a:hover {
   color: #f2f2f2;
   text-shadow: 0 0 6px #ffffff88;
@@ -44,11 +52,4 @@ nav a:hover {
 <body>
 
 <nav>
-  <a href="index.html">Accueil</a>
-  <a href="chants-noirs.html">Chants noirs</a>
-  <a href="chroniques.html">Chroniques</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
-</body>
-</html>
+  <a href="index.html">Accueil</
