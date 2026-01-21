@@ -1,4 +1,4 @@
-/* ===== BASE GÉNÉRALE ===== */
+/* ===== POLICE ET BASE ===== */
 body {
     margin: 0;
     padding: 0;
@@ -6,15 +6,14 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    color: #fff; /* par défaut, couleur claire */
+    color: #fff;
 }
 
-/* ===== MENU ===== */
+/* ===== MENU FIXE À DROITE ===== */
 nav {
     position: fixed;
-    top: 0;
-    right: 0;
-    padding: 20px;
+    top: 20px;
+    right: 20px;
     display: flex;
     gap: 30px;
     font-weight: 600;
@@ -23,72 +22,41 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: inherit; /* prendra la couleur définie pour la page */
+    color: inherit;
     transition: color 0.3s;
 }
 
 nav a:hover {
-    color: #ff5555; /* un petit effet rouge vif au survol */
+    color: #ff5555;
 }
 
-/* ===== TITRES ET TEXTES ===== */
-h1, h2, h3, h4 {
-    margin: 20px;
+/* ===== CONTENU PRINCIPAL ===== */
+header {
+    padding: 100px 50px 50px 50px;
 }
 
-p {
-    margin: 15px 20px;
-    line-height: 1.6;
-}
-
-/* ===== PAGES INDIVIDUELLES ===== */
-
-/* --- Accueil --- */
+/* ===== PAGES ===== */
 body.home {
     background-image: url('accueil.jpg');
-    color: #f0f0f0; /* texte clair sur fond sombre */
-}
-
-body.home nav {
     color: #f0f0f0;
 }
 
-/* --- Chants Noirs --- */
 body.chants-noirs {
     background-image: url('chants-noirs.jpg');
-    color: #222222; /* texte foncé sur fond clair */
-}
-
-body.chants-noirs nav {
     color: #222222;
 }
 
-/* --- Fragments --- */
 body.fragments {
     background-image: url('fragments.jpg');
-    color: #f0f0f0; /* texte clair */
-}
-
-body.fragments nav {
     color: #f0f0f0;
 }
 
-/* --- Chroniques --- */
 body.chroniques {
     background-image: url('chroniques.jpg');
-    color: #222222; /* texte foncé */
-}
-
-body.chroniques nav {
     color: #222222;
 }
 
-/* --- Contact --- */
 body.contact {
     background-image: url('contact.jpg');
-    color: #f0f0f0; /* texte clair */
-}
-
-body.contact nav {
     color: #f0f0f0;
 }
