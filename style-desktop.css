@@ -1,5 +1,12 @@
 @media (min-width: 1024px) {
 
+  body {
+    background-color: #111;
+    color: #eee;
+    background-size: cover;
+    background-position: center;
+  }
+
   /* Menu horizontal */
   .menu ul {
     display: flex !important;
@@ -14,6 +21,11 @@
 
   .menu a {
     padding: 10px 15px;
+    color: #eee;
+  }
+
+  .menu a:hover {
+    background: rgba(255,255,255,0.1);
   }
 
   /* Sections desktop */
@@ -23,12 +35,6 @@
     align-items: center;
     padding: 50px;
     text-align: left;
-  }
-
-  /* Fonds desktop */
-  body {
-    background-size: cover;
-    background-position: center;
   }
 
   .section img {
