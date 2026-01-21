@@ -88,3 +88,36 @@ body.contact {
 body.contact nav a {
   color: #ffffff;
 }
+.contact-form {
+  max-width: 500px;
+  margin: 150px auto;
+  padding: 20px;
+  background-color: rgba(0,0,0,0.6); /* fond semi-transparent */
+  border-radius: 6px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px;
+  font-family: system-ui, sans-serif;
+  background-color: rgba(255,255,255,0.05);
+  border: none;
+  color: #ffffff;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #f5e65b; /* couleur pigment */
+  color: #111111;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
