@@ -128,17 +128,19 @@ body.contact nav a {
     position: fixed;
     top: 12px;
     right: 12px;
-    left: 12px;
-    text-align: center;
-    background: rgba(0,0,0,0.6);
-    padding: 8px 0;
+    z-index: 20;
+    background: rgba(0,0,0,0.65);
+    padding: 10px 14px;
+    border-radius: 4px;
+    text-align: right;
   }
 
   nav a {
-    display: inline-block;
-    margin: 0 10px;
-    font-size: 12px;
-    letter-spacing: 0.18em;
+    display: block;
+    margin: 6px 0;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    white-space: nowrap;
   }
 }
 body {
