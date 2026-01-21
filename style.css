@@ -82,14 +82,9 @@ body.contact {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: #000000;
+  color: #ffffff; /* texte principal en clair si besoin */
 }
 body.contact nav a {
-  color: #000000;
-}
-
-/* ===== OPTIONS SUPPLÉMENTAIRES ===== */
-body, html {
-  overflow-x: hidden;
+  color: #ffffff; /* menu en clair */
 }
 
