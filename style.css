@@ -141,3 +141,8 @@ body.contact nav a {
     letter-spacing: 0.18em;
   }
 }
+body {
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+}
