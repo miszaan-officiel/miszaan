@@ -121,6 +121,30 @@ body.contact nav a {
   font-weight: bold;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+
+  body {
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+  }
+
+  nav {
+    position: static;
+    margin: 16px 0;
+    text-align: center;
+    background: none;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    white-space: nowrap;
+  }
+}
 body {
   background-size: cover;
   background-position: center;
