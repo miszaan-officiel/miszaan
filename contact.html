@@ -18,63 +18,77 @@ html, body {
 body {
   font-family: 'IM Fell English SC', serif;
   background: url("images/contact.jpg") center / cover no-repeat;
+  color: #f2f2f2;
 }
 
 /* MENU VERTICAL GAUCHE */
 nav {
   position: absolute;
   top: 48px;
-  left: 32px;   
+  left: 32px;
   display: flex;
-  flex-direction: column; /* vertical */
-  gap: 40px; /* espace suffisant pour respirer */
+  flex-direction: column;
+  gap: 40px;
 }
 
 nav a {
   text-decoration: none;
-  font-size: 20px; /* taille originale */
-  font-weight: normal;
+  font-size: 20px;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: #f2f2f2; /* clair pour contraste */
+  color: #f2f2f2;
   padding-bottom: 6px;
   transition: color 0.25s, text-shadow 0.25s;
 }
 
-/* Halo sur survol */
 nav a:hover {
   color: #f2f2f2;
   text-shadow: 0 0 6px #ffffff88;
 }
 
-/* Formulaire */
+/* FORMULAIRE BLOODBONE - À DROITE */
 form {
   position: absolute;
-  top: 150px;
-  left: 32px;
+  top: 48px;
+  right: 48px;
+  width: 380px;
+  background: rgba(26, 26, 26, 0.85); /* sombre semi-transparent */
+  border: 2px solid #880000; /* bordure sanglante */
+  padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  max-width: 400px;
+  box-shadow: 0 0 12px #000000aa;
 }
 
 input, textarea, button {
   font-family: 'IM Fell English SC', serif;
   font-size: 16px;
-  padding: 8px;
-  border: none;
-  border-radius: 4px;
+  padding: 10px;
+  border: 2px solid #880000;
+  border-radius: 2px;
+  background: #1a1a1a;
+  color: #f2f2f2;
+  transition: all 0.25s;
+}
+
+input:focus, textarea:focus {
+  border-color: #ff0000;
+  box-shadow: 0 0 8px #ff000080;
+  outline: none;
 }
 
 button {
-  background-color: #f2f2f2;
-  color: #1a1a1a;
+  background-color: #880000;
+  color: #f2f2f2;
+  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.25s;
+  transition: all 0.25s;
 }
 
 button:hover {
-  background-color: #ffffffaa;
+  background-color: #ff0000;
+  box-shadow: 0 0 10px #ff000080;
 }
 </style>
 </head>
@@ -91,6 +105,7 @@ button:hover {
 <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
   <input type="text" name="name" placeholder="Nom" required>
   <input type="email" name="email" placeholder="Email" required>
+  <input type="text" name="subject" placeholder="Objet" required>
   <textarea name="message" placeholder="Votre message" rows="6" required></textarea>
   <button type="submit">Envoyer</button>
 </form>
