@@ -143,6 +143,15 @@ body.contact nav a {
     white-space: nowrap;
   }
 }
+@media (max-width: 768px) {
+
+  body {
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center top;
+    min-height: 100vh;
+  }
+}
 body {
   background-size: cover;
   background-position: center;
