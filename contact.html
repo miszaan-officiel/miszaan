@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>CONTACT</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>CONTACT</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body class="contact">
-<nav>
-  <a href="index.html">ACCUEIL</a>
-  <a href="chants-noirs.html">CHANTS NOIRS</a>
-  <a href="fragments.html">FRAGMENTS</a>
-  <a href="chroniques.html">CHRONIQUES</a>
-</nav>
+
+  <!-- MENU -->
+  <nav>
+    <a href="chants-noirs.html">CHANTS NOIRS</a>
+    <a href="fragments.html">FRAGMENTS</a>
+    <a href="chroniques.html">CHRONIQUES</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+
+  <!-- FORMULAIRE DE CONTACT -->
+  <div class="contact-form">
+    <form>
+      <input type="text" name="name" placeholder="Nom ou pseudo" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="text" name="subject" placeholder="Objet" required>
+      <textarea name="message" placeholder="Votre message" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
+
 </body>
 </html>
