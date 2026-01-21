@@ -46,40 +46,43 @@ nav a:hover {
   text-shadow: 0 0 6px #ffffff88;
 }
 
-/* FORMULAIRE BLOODBONE - À DROITE */
+/* FORMULAIRE BLOODBONE – À DROITE */
 form {
   position: absolute;
   top: 48px;
   right: 48px;
   width: 380px;
-  background: rgba(26, 26, 26, 0.85); /* sombre semi-transparent */
-  border: 2px solid #880000; /* bordure sanglante */
+  background: linear-gradient(145deg, #1a1a1a 0%, #2b1f1f 100%); /* fond sombre et granuleux */
+  border: 2px solid #5b0000; /* rouge sombre, oxydé */
+  border-radius: 8px 2px 12px 4px; /* angles irréguliers */
   padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 16px;
   box-shadow: 0 0 12px #000000aa;
+  background-image: url('images/texture-grain.jpg'); /* optionnel, granuleux */
+  background-size: cover;
 }
 
 input, textarea, button {
   font-family: 'IM Fell English SC', serif;
   font-size: 16px;
   padding: 10px;
-  border: 2px solid #880000;
-  border-radius: 2px;
+  border: 2px solid #5b0000;
+  border-radius: 4px 2px 6px 3px; /* angles irréguliers */
   background: #1a1a1a;
   color: #f2f2f2;
   transition: all 0.25s;
 }
 
 input:focus, textarea:focus {
-  border-color: #ff0000;
-  box-shadow: 0 0 8px #ff000080;
+  border-color: #8b0000;
+  box-shadow: 0 0 8px #8b000080;
   outline: none;
 }
 
 button {
-  background-color: #880000;
+  background-color: #5b0000;
   color: #f2f2f2;
   font-weight: bold;
   cursor: pointer;
@@ -87,8 +90,8 @@ button {
 }
 
 button:hover {
-  background-color: #ff0000;
-  box-shadow: 0 0 10px #ff000080;
+  background-color: #8b0000;
+  box-shadow: 0 0 10px #8b000080;
 }
 </style>
 </head>
