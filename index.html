@@ -1,127 +1,24 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ACCUEIL - BloodBone</title>
-
-<!-- CSS clé en main -->
-<style>
-/* Réinitialisation */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #111;
-  color: #eee;
-  background-image: url('tonfond.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* Menu */
-.menu {
-  background: rgba(0,0,0,0.8);
-  padding: 10px;
-  position: relative;
-  z-index: 1000;
-}
-
-.menu ul {
-  list-style: none;
-  display: none; /* mobile par défaut */
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.menu a {
-  text-decoration: none;
-  color: #eee;
-  font-weight: bold;
-  padding: 5px 10px;
-}
-
-.menu a:hover {
-  background: rgba(255,255,255,0.1);
-  border-radius: 4px;
-}
-
-.menu .hamburger {
-  display: block;
-  font-size: 1.5em;
-  cursor: pointer;
-}
-
-/* Menu ouvert */
-.menu.active ul {
-  display: flex;
-}
-
-/* Sections */
-.section {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  text-align: center;
-}
-
-/* Images internes */
-.section img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Desktop */
-@media (min-width: 1024px) {
-  .menu ul {
-    display: flex !important;
-    flex-direction: row;
-    gap: 20px;
-    margin-top: 0;
-  }
-  .menu .hamburger { display: none; }
-
-  .section {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: 50px;
-    text-align: left;
-  }
-
-  .section img {
-    max-width: 50%;
-  }
-}
-</style>
+    <meta charset="UTF-8">
+    <title>Miszâân - Accueil</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="home">
 
-<!-- Menu -->
-<div class="menu">
-  <span class="hamburger">&#9776;</span>
-  <ul>
-    <li><a href="ACCUEIL.html">ACCUEIL</a></li>
-    <li><a href="CHANTS NOIRS.html">CHANTS NOIRS</a></li>
-    <li><a href="FRAGMENTS.html">FRAGMENTS</a></li>
-    <li><a href="CHRONIQUES.html">CHRONIQUES</a></li>
-    <li><a href="CONTACT.html">CONTACT</a></li>
-  </ul>
-</div>
+    <nav>
+        <a href="chants-noirs.html">CHANTS NOIRS</a>
+        <a href="fragments.html">FRAGMENTS</a>
+        <a href="chroniques.html">CHRONIQUES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
 
-<!-- Sections exemples -->
-<div class="section">
-  <h1>Bienvenue sur BloodBone</h1>
-  <p>Découvrez le continent de Miszâân et ses Chants Noirs…</p>
-  <img src="image1.jpg" alt="Illustration">
-</div>
+    <header>
+        <h1>Bienvenue sur Miszâân</h1>
+        <p>Le monde de BloodBone vous attend.</p>
+    </header>
 
-<div class="section">
-  <h2>Fragments</h2>
-  <p>Les fragments d’histoire et de mystère.</p>
-  <img src="image2.jpg" alt="Illus
+</body>
+</html>
