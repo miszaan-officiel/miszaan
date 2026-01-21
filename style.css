@@ -1,1 +1,95 @@
+/* ===== RESET MINIMAL ===== */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: system-ui, sans-serif;
+}
+
+/* ===== MENU COMMUN ===== */
+nav {
+  position: fixed;
+  top: 24px;
+  right: 40px;
+  z-index: 10;
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-size: 13px;
+  margin-left: 22px;
+}
+
+nav a:hover {
+  opacity: 0.85;
+}
+
+/* ===== PAGES ===== */
+
+/* ACCUEIL */
+body.accueil {
+  background-image: url("images/accueil.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+body.accueil nav a {
+  color: #ffffff;
+}
+
+/* CHANTS NOIRS */
+body.chants-noirs {
+  background-image: url("images/chants-noirs.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #000000;
+}
+body.chants-noirs nav a {
+  color: #000000;
+}
+
+/* FRAGMENTS */
+body.fragments {
+  background-image: url("images/fragments.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+body.fragments nav a {
+  color: #ffffff;
+}
+
+/* CHRONIQUES */
+body.chroniques {
+  background-image: url("images/chroniques.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #000000;
+}
+body.chroniques nav a {
+  color: #000000;
+}
+
+/* CONTACT */
+body.contact {
+  background-image: url("images/contact.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #000000;
+}
+body.contact nav a {
+  color: #000000;
+}
+
+/* ===== OPTIONS SUPPLÉMENTAIRES ===== */
+body, html {
+  overflow-x: hidden;
+}
 
