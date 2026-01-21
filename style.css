@@ -123,13 +123,29 @@ body.contact nav a {
 }
 @media (max-width: 768px) {
 
+  nav {
+    position: static;
+    width: 100%;
+    margin: 12px 0 20px;
+    text-align: center;
+  }
+
+  nav a {
+    display: block;
+    margin: 6px 0;
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    line-height: 1.6;
+    white-space: nowrap;
+  }
+
   body {
     background-attachment: scroll;
     background-size: cover;
     background-position: center;
     min-height: 100vh;
   }
-
+}
   nav {
     position: static;
     margin: 16px 0;
