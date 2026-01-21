@@ -1,4 +1,4 @@
-/* === Réinitialisation de base === */
+/* --- Réinitialisation de base --- */
 * {
   margin: 0;
   padding: 0;
@@ -16,9 +16,9 @@ html, body {
   color: #fff;
 }
 
-/* === Sections === */
+/* --- Sections --- */
 .section {
-  min-height: 100vh; /* toujours au moins la hauteur de l'écran */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,7 +27,7 @@ html, body {
   text-align: center;
 }
 
-/* === Menu mobile === */
+/* --- Menu mobile --- */
 .menu {
   background: rgba(0,0,0,0.7);
   padding: 10px;
@@ -56,7 +56,7 @@ html, body {
   border-radius: 4px;
 }
 
-/* === Bouton hamburger === */
+/* --- Bouton hamburger --- */
 .menu .hamburger {
   display: block;
   font-size: 1.5em;
@@ -64,12 +64,12 @@ html, body {
   cursor: pointer;
 }
 
-/* === Menu ouvert === */
+/* --- Menu ouvert --- */
 .menu.active ul {
   display: flex;
 }
 
-/* === Images ou fonds internes === */
+/* --- Images internes --- */
 .section img {
   max-width: 100%;
   height: auto;
