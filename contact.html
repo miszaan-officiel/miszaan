@@ -1,9 +1,101 @@
-<form action="https://formspree.io/f/xqeegjvz" method="POST" style="max-width:400px;margin:50px auto;padding:20px;background-color:rgba(0,0,0,0.6);color:#fff;font-family:system-ui,sans-serif;border-radius:8px;">
-  <label for="email">Votre email :</label>
-  <input type="email" name="email" id="email" placeholder="exemple@domaine.com" required style="width:100%;margin:8px 0;padding:8px;border-radius:4px;border:none;">
-  
-  <label for="message">Votre message :</label>
-  <textarea name="message" id="message" placeholder="Écrivez ici..." required style="width:100%;margin:8px 0;padding:8px;border-radius:4px;border:none;height:100px;"></textarea>
-  
-  <button type="submit" style="background-color:#f5e65b;color:#111;padding:10px 20px;border:none;border-radius:4px;font-weight:bold;cursor:pointer;">Envoyer</button>
-</form>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>CONTACT – Miszâân</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Fond et marque pour cette page */
+    body {
+      margin: 0;
+      background-image: url("images/contact.jpg"); /* Marque brune sur fond gris/anthracite */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      font-family: system-ui, sans-serif;
+      color: #fff; /* police claire pour fond foncé */
+    }
+
+    /* Menu identique aux autres pages */
+    nav {
+      position: fixed;
+      top: 24px;
+      right: 40px;
+      z-index: 10;
+    }
+    nav a {
+      text-transform: uppercase;
+      letter-spacing: 0.32em;
+      font-size: 13px;
+      font-weight: 500;
+      color: #fff; /* clair pour fond foncé */
+      text-decoration: none;
+      margin-left: 22px;
+    }
+    nav a:hover {
+      color: #f5e65b; /* léger effet au survol */
+    }
+
+    /* Formulaire stylisé BloodBone */
+    form {
+      max-width: 400px;
+      margin: 120px auto;
+      padding: 20px;
+      background-color: rgba(0,0,0,0.6);
+      border-radius: 8px;
+    }
+    form label {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
+    }
+    form input, form textarea {
+      width: 100%;
+      margin-top: 6px;
+      padding: 8px;
+      border-radius: 4px;
+      border: none;
+      font-family: system-ui, sans-serif;
+    }
+    form textarea {
+      height: 100px;
+      resize: vertical;
+    }
+    form button {
+      margin-top: 12px;
+      background-color: #7a4c28; /* couleur sombre/brune */
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #a56b3f;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menu -->
+  <nav>
+    <a href="chants-noirs.html">CHANTS NOIRS</a>
+    <a href="fragments.html">FRAGMENTS</a>
+    <a href="chroniques.html">CHRONIQUES</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+
+  <!-- Formulaire Formspree -->
+  <form action="https://formspree.io/f/ton-identifiant" method="POST">
+    <label for="email">Votre email :</label>
+    <input type="email" name="email" id="email" placeholder="exemple@domaine.com" required>
+
+    <label for="message">Votre message :</label>
+    <textarea name="message" id="message" placeholder="Écrivez ici..." required></textarea>
+
+    <button type="submit">Envoyer</button>
+  </form>
+
+</body>
+</html>
