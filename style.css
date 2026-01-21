@@ -1,172 +1,94 @@
+/* ===== BASE GÉNÉRALE ===== */
 body {
-  background: red !important;
+    margin: 0;
+    padding: 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff; /* par défaut, couleur claire */
 }
 
-/* ===== RESET MINIMAL ===== */
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: system-ui, sans-serif;
-  overflow-x: hidden;
-}
-
-/* ===== MENU COMMUN ===== */
+/* ===== MENU ===== */
 nav {
-  position: fixed;
-  top: 24px;
-  right: 40px;
-  z-index: 10;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+    font-weight: 600;
+    z-index: 1000;
 }
 
 nav a {
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.28em;
-  font-size: 13px;
-  margin-left: 22px;
+    text-decoration: none;
+    color: inherit; /* prendra la couleur définie pour la page */
+    transition: color 0.3s;
 }
 
 nav a:hover {
-  opacity: 0.85;
+    color: #ff5555; /* un petit effet rouge vif au survol */
 }
 
-/* ===== PAGES ===== */
-
-/* ACCUEIL : fond foncé → menu clair */
-body.accueil {
-  background-image: url("images/accueil.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #ffffff;
-}
-body.accueil nav a {
-  color: #ffffff;
+/* ===== TITRES ET TEXTES ===== */
+h1, h2, h3, h4 {
+    margin: 20px;
 }
 
-/* CHANTS NOIRS : fond clair → menu foncé */
-body.chants-noirs {
-  background-image: url("images/chants-noirs.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #000000;
-}
-body.chants-noirs nav a {
-  color: #000000;
-}
-
-/* FRAGMENTS : fond foncé → menu clair */
-body.fragments {
-  background-image: url("images/fragments.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #ffffff;
-}
-body.fragments nav a {
-  color: #ffffff;
-}
-
-/* CHRONIQUES : fond clair → menu foncé */
-body.chroniques {
-  background-image: url("images/chroniques.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #000000;
-}
-body.chroniques nav a {
-  color: #000000;
-}
-
-/* CONTACT : fond foncé → menu clair */
-body.contact {
-  background-image: url("images/contact.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #ffffff;
-}
-body.contact nav a {
-  color: #ffffff;
-}
-.contact-form {
-  max-width: 500px;
-  margin: 150px auto;
-  padding: 20px;
-  background-color: rgba(0,0,0,0.6); /* fond semi-transparent */
-  border-radius: 6px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  margin-bottom: 12px;
-  padding: 10px;
-  font-family: system-ui, sans-serif;
-  background-color: rgba(255,255,255,0.05);
-  border: none;
-  color: #ffffff;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: rgba(255,255,255,0.5);
-}
-
-.contact-form button {
-  width: 100%;
-  padding: 12px;
-  background-color: #f5e65b; /* couleur pigment */
-  color: #111111;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-}
-@media (max-width: 768px) {
-
-  nav {
-    position: static;
-    width: 100%;
-    margin: 12px 0 20px;
-    text-align: center;
-  }
-
-  nav a {
-    display: block;
-    margin: 6px 0;
-    font-size: 13px;
-    letter-spacing: 0.22em;
+p {
+    margin: 15px 20px;
     line-height: 1.6;
-    white-space: nowrap;
-  }
-
-  body {
-    background-attachment: scroll;
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
-  }
 }
-  nav {
-    position: static;
-    margin: 16px 0;
-    text-align: center;
-    background: none;
-  }
 
-  nav a {
-    display: inline-block;
-    margin: 0 10px;
-    font-size: 12px;
-    letter-spacing: 0.18em;
-    white-space: nowrap;
-  }
+/* ===== PAGES INDIVIDUELLES ===== */
+
+/* --- Accueil --- */
+body.home {
+    background-image: url('accueil.jpg');
+    color: #f0f0f0; /* texte clair sur fond sombre */
 }
-body {
-  background-size: cover;
-  background-position: center;
-  background-attachment: scroll;
+
+body.home nav {
+    color: #f0f0f0;
+}
+
+/* --- Chants Noirs --- */
+body.chants-noirs {
+    background-image: url('chants-noirs.jpg');
+    color: #222222; /* texte foncé sur fond clair */
+}
+
+body.chants-noirs nav {
+    color: #222222;
+}
+
+/* --- Fragments --- */
+body.fragments {
+    background-image: url('fragments.jpg');
+    color: #f0f0f0; /* texte clair */
+}
+
+body.fragments nav {
+    color: #f0f0f0;
+}
+
+/* --- Chroniques --- */
+body.chroniques {
+    background-image: url('chroniques.jpg');
+    color: #222222; /* texte foncé */
+}
+
+body.chroniques nav {
+    color: #222222;
+}
+
+/* --- Contact --- */
+body.contact {
+    background-image: url('contact.jpg');
+    color: #f0f0f0; /* texte clair */
+}
+
+body.contact nav {
+    color: #f0f0f0;
 }
