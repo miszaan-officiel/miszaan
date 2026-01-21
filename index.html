@@ -6,7 +6,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
 
 <style>
 html, body {
@@ -16,32 +16,34 @@ html, body {
 }
 
 body {
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'IM Fell English SC', serif;
   background: url("images/accueil.jpg") center / cover no-repeat;
 }
 
-/* MENU */
+/* MENU ACCUEIL */
 nav {
   position: absolute;
-  top: 40px;
-  right: 40px;
+  top: 32px;
+  left: 48px;   
   display: flex;
-  gap: 24px;
+  gap: 32px;
 }
 
 nav a {
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
+  font-size: 20px;
+  font-weight: normal;
+  letter-spacing: 0.24em;  
   text-transform: uppercase;
   color: #f2f2f2;
-  padding-bottom: 4px;
-  border-bottom: 2px solid transparent;
+  padding-bottom: 6px;
+  transition: color 0.25s, text-shadow 0.25s;
 }
 
+/* Survol universel BloodBone */
 nav a:hover {
-  border-bottom: 2px solid #f2f2f2;
+  color: #f2f2f2;
+  text-shadow: 0 0 6px #ffffff88;
 }
 </style>
 </head>
