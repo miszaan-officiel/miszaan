@@ -25,3 +25,7 @@
     text-shadow: 0 0 10px #f00; /* halo un peu plus fort */
   }
 }
+/* TEST SILENCIEUX – NE PRODUIT AUCUN EFFET VISUEL */
+@media screen and (max-width: 1px) {
+  nav { outline: 0; }
+}
