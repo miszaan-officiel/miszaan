@@ -193,6 +193,58 @@ nav a:hover {
   }
 }
 </style>
+<style>
+/* === MENU HORIZONTAL BLOODBONE MINIMALISTE === */
+nav {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important; /* tous les liens centrés */
+  align-items: center !important;
+  gap: 20px !important; /* espace entre les liens */
+  padding: 6px 0 !important;
+  background: none !important; /* rien derrière */
+  border: none !important;
+  box-shadow: none !important;
+  z-index: 999 !important;
+  flex-wrap: nowrap !important; /* pas de retour à la ligne, tout tient */
+}
+
+/* Liens du menu */
+nav a {
+  color: #f2f2f2 !important; /* blanc doux, lisible sur tous les fonds */
+  font-size: 0.75rem !important; /* réduit pour tenir sur une ligne */
+  font-weight: bold !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  padding: 4px 8px !important;
+  white-space: nowrap !important;
+  transition: color 0.2s ease, transform 0.2s ease !important;
+}
+
+/* Survol / clic discret */
+nav a:hover,
+nav a:active {
+  color: #dddddd !important; /* discret, plus de rouge dégueulasse */
+  transform: scale(1.05) !important;
+}
+
+/* Ajustement mobile */
+@media screen and (max-width: 768px) {
+  nav {
+    justify-content: space-around !important;
+    padding: 4px 0 !important;
+    gap: 8px !important;
+  }
+  nav a {
+    font-size: 0.65rem !important; /* encore plus petit si nécessaire */
+    padding: 3px 6px !important;
+  }
+}
+</style>
 
 <nav>
   <a href="chants-noirs.html">Chants noirs</a>
