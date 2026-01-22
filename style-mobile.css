@@ -1,162 +1,62 @@
-/* MOBILE – ACCUEIL */
-@media screen and (max-width: 768px) {
-  nav {
-    display: flex;
-    flex-direction: column; /* menu vertical */
-    gap: 18px;              /* espace entre les liens */
-    position: fixed;        /* reste visible */
-    top: 20px;
-    left: 20px;
-    z-index: 1000;
-  }
+/* === MENU BLOODBONE : CLE-EN-MAIN === */
 
-  nav a {
-    font-size: 0.9rem;       /* plus petit que desktop */
-    letter-spacing: 0.25em;  /* respire */
-    text-align: left;
-    text-decoration: none;   /* supprime soulignement par défaut */
-    color: #aa0000;          /* rouge sombre BloodBone */
-    margin: 0;
-    padding: 5px 0;
-    text-shadow: 0 0 5px #f0f0f0; /* halo léger au survol */
-  }
-
-  nav a:hover {
-    text-shadow: 0 0 10px #f00; /* halo un peu plus fort */
-  }
+/* --- Desktop (inchangé) --- */
+nav {
+  position: absolute;
+  top: 48px;
+  left: 32px;   
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
-/* TEST SILENCIEUX – NE PRODUIT AUCUN EFFET VISUEL */
-@media screen and (max-width: 1px) {
-  nav { outline: 0; }
-}
-/* MOBILE – MENU ACCUEIL (SAFE) */
-@media screen and (max-width: 768px) {
-  nav {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
-  }
 
-  nav a {
-    font-size: 0.9rem;
-    letter-spacing: 0.2em;
-    text-decoration: none;
-  }
+nav a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: normal;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #f2f2f2;
+  padding-bottom: 6px;
+  transition: color 0.25s, text-shadow 0.25s;
 }
-/* MOBILE – MENU NE MANGE PLUS LES IMAGES */
-@media screen and (max-width: 768px) {
-  nav {
-    position: relative;
-    margin-bottom: 32px; /* espace avant les images */
-  }
 
-  nav a {
-    color: #111;
-    text-shadow:
-      0 0 2px rgba(0,0,0,0.6),
-      0 0 6px rgba(0,0,0,0.4);
-  }
+nav a:hover {
+  color: #f2f2f2;
+  text-shadow: 0 0 6px #ffffff88;
 }
-/* MOBILE – MENU SAFE */
-@media screen and (max-width: 768px) {
-  nav {
-    display: flex;
-    flex-direction: column;
-    position: relative;  /* reste dans le flux */
-    margin-bottom: 32px; /* espace avant les images/marques */
-    gap: 12px;           /* espace entre liens */
-    z-index: 1;          /* pour rester au-dessus du contenu si nécessaire */
-  }
 
-  nav a {
-    color: #111;          /* noir profond, lisible */
-    text-shadow: 0 0 2px rgba(0,0,0,0.6), 0 0 6px rgba(0,0,0,0.4); /* contraste léger */
-    font-size: 0.95rem;   /* légèrement plus petit pour mobile */
-    text-decoration: none;
-  }
-}
-/* === MENU MOBILE BLOODBONE === */
-@media screen and (max-width: 768px) {
-  nav {
-    display: flex;
-    flex-direction: column;   /* menu vertical */
-    position: relative;       /* reste dans le flux du site */
-    margin: 0 0 40px 0;       /* espace sous le menu pour laisser respirer les marques */
-    gap: 14px;                /* espace entre chaque lien */
-    z-index: 2;               /* au-dessus du contenu si nécessaire */
-  }
-
-  nav a {
-    color: #111;              /* noir profond pour lisibilité */
-    text-shadow: 0 0 2px rgba(0,0,0,0.6), 0 0 6px rgba(0,0,0,0.4); /* contraste subtil */
-    font-size: 1rem;          /* taille adaptée mobile */
-    font-family: 'IM Fell English SC', serif; /* police épique déjà importée */
-    text-decoration: none;
-    padding: 4px 0;           /* respirer un peu autour du texte */
-  }
-
-  /* optionnel : effet au survol */
-  nav a:hover {
-    text-shadow: 0 0 4px rgba(0,0,0,0.8), 0 0 8px rgba(0,0,0,0.6);
-  }
-}
-/* === MENU MOBILE : ISOLATION + CONTRASTE === */
+/* --- Mobile (responsive) --- */
 @media screen and (max-width: 768px) {
 
   nav {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background: rgba(15, 15, 15, 0.85); /* fond sombre semi-opaque */
-    padding: 18px 20px;
-    margin-bottom: 48px;               /* éloigne le menu des marques */
-    border-radius: 6px;                /* pas trop angulaire */
-    z-index: 10;
-  }
-
-  nav a {
-    color: #e6e1d8;                     /* os clair, lisible */
-    font-size: 0.95rem;
-    line-height: 1.4;
-    text-decoration: none;
-    text-shadow: 0 0 3px rgba(0,0,0,0.8);
-  }
-
-  nav a + a {
-    margin-top: 12px;                  /* respiration verticale */
-  }
-}
-/* === MENU MOBILE BLOODBONE : CLÉ-EN-MAIN === */
-@media screen and (max-width: 768px) {
-
-  /* Menu vertical mobile */
-  nav {
-    position: fixed;               /* menu toujours visible */
+    position: fixed;                  /* reste visible sur mobile */
     top: 12px;
     left: 12px;
-    right: 12px;                   /* occupe presque toute la largeur */
+    right: 12px;
     background: rgba(10, 10, 10, 0.85); /* fond sombre semi-transparent */
     padding: 12px 18px;
     border-radius: 6px;
     display: flex;
     flex-direction: column;
     gap: 12px;
-    z-index: 999;                  /* au-dessus de tout le reste */
+    z-index: 999;                     /* au-dessus des marques/images */
   }
 
-  /* Liens du menu */
   nav a {
-    color: #f2f2f2;                /* os clair, lisible sur tous les fonds */
-    font-size: 1rem;                /* taille adaptée mobile */
+    color: #f2f2f2;
+    font-size: 1rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     text-decoration: none;
     padding: 6px 0;
-    transition: color 0.25s, text-shadow 0.25s;
+    text-shadow: 0 0 3px rgba(0,0,0,0.8);
   }
 
-  /* Survol / halo */
+  nav a + a {
+    margin-top: 8px;
+  }
+
   nav a:hover {
     text-shadow: 0 0 6px #ffffff88;
   }
