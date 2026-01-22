@@ -44,3 +44,17 @@
     text-decoration: none;
   }
 }
+/* MOBILE – MENU NE MANGE PLUS LES IMAGES */
+@media screen and (max-width: 768px) {
+  nav {
+    position: relative;
+    margin-bottom: 32px; /* espace avant les images */
+  }
+
+  nav a {
+    color: #111;
+    text-shadow:
+      0 0 2px rgba(0,0,0,0.6),
+      0 0 6px rgba(0,0,0,0.4);
+  }
+}
