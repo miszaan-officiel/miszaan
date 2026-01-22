@@ -29,3 +29,18 @@
 @media screen and (max-width: 1px) {
   nav { outline: 0; }
 }
+/* MOBILE – MENU ACCUEIL (SAFE) */
+@media screen and (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+  }
+}
