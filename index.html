@@ -50,6 +50,33 @@ nav a:hover {
 }
 </style>
 <link rel="stylesheet" href="style-mobile.css">
+  <style>
+/* === MENU DESKTOP === */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  gap: 24px;
+  padding: 16px 24px;
+  z-index: 1000;
+}
+
+nav a {
+  font-size: 16px;
+  color: #eaeaea;
+  text-decoration: none;
+  letter-spacing: 0.18em;
+}
+
+/* === MOBILE : ON CACHE LE MENU === */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+}
+</style>
+
 </head>
 
 <body>
