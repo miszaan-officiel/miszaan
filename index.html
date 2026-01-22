@@ -141,6 +141,58 @@ nav a:hover {
   }
 }
 </style>
+<style>
+/* === MENU BLOODBONE HORIZONTAL ULTRA-LISIBLE === */
+nav {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important; /* permet aux liens de passer à la ligne */
+  gap: 20px !important;
+  padding: 10px 0 !important;
+  background: rgba(15,10,10,0.85) !important; /* semi-transparent */
+  box-shadow: 0 0 15px #55000044 inset, 0 0 20px #88000033 !important;
+  z-index: 999 !important;
+  border-bottom: none !important; /* supprime la ligne rouge moche */
+}
+
+/* Liens menu */
+nav a {
+  color: #ffdddd !important;
+  font-size: 1rem !important; /* taille cohérente */
+  font-weight: bold !important;
+  letter-spacing: 0.15em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  padding: 6px 10px !important;
+  text-shadow: 0 0 4px #55000088, 0 0 6px #ff111188 !important;
+  white-space: nowrap !important; /* pas de coupure de mot */
+  transition: all 0.2s ease-in-out !important;
+}
+
+nav a:hover {
+  color: #ff8888 !important;
+  text-shadow: 0 0 10px #ff2222, 0 0 15px #ff5555 !important;
+  transform: scale(1.05) !important;
+}
+
+/* Ajustement mobile */
+@media screen and (max-width: 768px) {
+  nav {
+    justify-content: space-around !important;
+    gap: 12px !important;
+    padding: 8px 0 !important;
+  }
+  
+  nav a {
+    font-size: 0.9rem !important; /* réduit légèrement pour éviter tronquage */
+    padding: 4px 6px !important;
+  }
+}
+</style>
 
 <nav>
   <a href="chants-noirs.html">Chants noirs</a>
