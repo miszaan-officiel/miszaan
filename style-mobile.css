@@ -1,11 +1,27 @@
 /* MOBILE – ACCUEIL */
 @media screen and (max-width: 768px) {
-  header a, .menu a, nav a, .navigation a {
-    display: block;
-    font-size: 0.9rem;
-    letter-spacing: 0.25em;
+  nav {
+    display: flex;
+    flex-direction: column; /* menu vertical */
+    gap: 18px;              /* espace entre les liens */
+    position: fixed;        /* reste visible */
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+  }
+
+  nav a {
+    font-size: 0.9rem;       /* plus petit que desktop */
+    letter-spacing: 0.25em;  /* respire */
     text-align: left;
-    margin: 8px 0;
-    text-shadow: 0 0 5px #f0f0f0; /* halo léger */
+    text-decoration: none;   /* supprime soulignement par défaut */
+    color: #aa0000;          /* rouge sombre BloodBone */
+    margin: 0;
+    padding: 5px 0;
+    text-shadow: 0 0 5px #f0f0f0; /* halo léger au survol */
+  }
+
+  nav a:hover {
+    text-shadow: 0 0 10px #f00; /* halo un peu plus fort */
   }
 }
