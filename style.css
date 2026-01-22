@@ -55,7 +55,11 @@ body.chroniques {
     background-image: url('chroniques.jpg');
     color: #222222;
 }
-
+nav a {
+  color: #111; /* noir profond, pas pur */
+  text-shadow:
+    0 0 2px rgba(0,0,0,0.6),
+    0 0 6px rgba(0,0,0,0.4);
 body.contact {
     background-image: url('contact.jpg');
     color: #f0f0f0;
