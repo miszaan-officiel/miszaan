@@ -58,3 +58,21 @@
       0 0 6px rgba(0,0,0,0.4);
   }
 }
+/* MOBILE – MENU SAFE */
+@media screen and (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    position: relative;  /* reste dans le flux */
+    margin-bottom: 32px; /* espace avant les images/marques */
+    gap: 12px;           /* espace entre liens */
+    z-index: 1;          /* pour rester au-dessus du contenu si nécessaire */
+  }
+
+  nav a {
+    color: #111;          /* noir profond, lisible */
+    text-shadow: 0 0 2px rgba(0,0,0,0.6), 0 0 6px rgba(0,0,0,0.4); /* contraste léger */
+    font-size: 0.95rem;   /* légèrement plus petit pour mobile */
+    text-decoration: none;
+  }
+}
