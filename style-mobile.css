@@ -101,3 +101,29 @@
     text-shadow: 0 0 4px rgba(0,0,0,0.8), 0 0 8px rgba(0,0,0,0.6);
   }
 }
+/* === MENU MOBILE : ISOLATION + CONTRASTE === */
+@media screen and (max-width: 768px) {
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: rgba(15, 15, 15, 0.85); /* fond sombre semi-opaque */
+    padding: 18px 20px;
+    margin-bottom: 48px;               /* éloigne le menu des marques */
+    border-radius: 6px;                /* pas trop angulaire */
+    z-index: 10;
+  }
+
+  nav a {
+    color: #e6e1d8;                     /* os clair, lisible */
+    font-size: 0.95rem;
+    line-height: 1.4;
+    text-decoration: none;
+    text-shadow: 0 0 3px rgba(0,0,0,0.8);
+  }
+
+  nav a + a {
+    margin-top: 12px;                  /* respiration verticale */
+  }
+}
