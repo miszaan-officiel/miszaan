@@ -127,3 +127,37 @@
     margin-top: 12px;                  /* respiration verticale */
   }
 }
+/* === MENU MOBILE BLOODBONE : CLÉ-EN-MAIN === */
+@media screen and (max-width: 768px) {
+
+  /* Menu vertical mobile */
+  nav {
+    position: fixed;               /* menu toujours visible */
+    top: 12px;
+    left: 12px;
+    right: 12px;                   /* occupe presque toute la largeur */
+    background: rgba(10, 10, 10, 0.85); /* fond sombre semi-transparent */
+    padding: 12px 18px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 999;                  /* au-dessus de tout le reste */
+  }
+
+  /* Liens du menu */
+  nav a {
+    color: #f2f2f2;                /* os clair, lisible sur tous les fonds */
+    font-size: 1rem;                /* taille adaptée mobile */
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 6px 0;
+    transition: color 0.25s, text-shadow 0.25s;
+  }
+
+  /* Survol / halo */
+  nav a:hover {
+    text-shadow: 0 0 6px #ffffff88;
+  }
+}
