@@ -23,20 +23,23 @@ body {
   background: url("images/accueil.jpg") center / cover no-repeat;
 }
 
-/* MENU HORIZONTAL MINIMALISTE */
+/* MENU HORIZONTAL BLOODBONE – visible et minimaliste */
 nav {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   display: flex;
-  justify-content: flex-start; /* à gauche pour ne jamais gêner la marque */
-  gap: 24px;
-  padding: 8px 24px;
-  background: none;
-  border: none;
-  box-shadow: none;
+  justify-content: flex-start; /* menu à gauche pour ne pas gêner la marque */
+  gap: 32px;
+  padding: 16px 24px;
+  background: none; /* pas de fond derrière */
   z-index: 999;
   font-family: 'Oswald', sans-serif; /* police froide, sans empâtement */
   text-transform: uppercase;
-  letter-spacing: 0
+  letter-spacing: 0.2em;
+}
+
+/* Liens du menu */
+nav a {
+  color: #f2f2f2;
+  font
