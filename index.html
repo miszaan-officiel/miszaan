@@ -6,9 +6,10 @@
 
 <title>ACCUEIL</title>
 
+<!-- Police froide, sans empâtement pour le menu -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
 html, body {
@@ -18,7 +19,7 @@ html, body {
 }
 
 body {
-  font-family: 'IM Fell English SC', serif;
+  font-family: 'IM Fell English SC', serif; /* texte général */
   background: url("images/accueil.jpg") center / cover no-repeat;
 }
 
@@ -29,59 +30,13 @@ nav {
   left: 0;
   width: 100%;
   display: flex;
-  justify-content: flex-start; /* positionné à gauche, jamais sur la marque */
-  gap: 20px;
-  padding: 6px 24px; /* laisse respirer et ne touche pas la marque */
-  background: none; /* supprimé */
-  border: none; /* supprimé */
-  box-shadow: none; /* supprimé */
+  justify-content: flex-start; /* à gauche pour ne jamais gêner la marque */
+  gap: 24px;
+  padding: 8px 24px;
+  background: none;
+  border: none;
+  box-shadow: none;
   z-index: 999;
-}
-
-/* Liens du menu */
-nav a {
-  color: #f2f2f2;
-  font-size: 1rem;
-  font-weight: bold;
-  letter-spacing: 0.15em;
+  font-family: 'Oswald', sans-serif; /* police froide, sans empâtement */
   text-transform: uppercase;
-  text-decoration: none;
-  padding: 4px 8px;
-  white-space: nowrap;
-  transition: color 0.25s ease, text-shadow 0.25s ease, transform 0.25s ease;
-}
-
-/* Halo sur survol */
-nav a:hover {
-  color: #f2f2f2;
-  text-shadow: 0 0 6px #ffffff88;
-  transform: scale(1.05);
-}
-
-/* MOBILE */
-@media screen and (max-width: 768px) {
-  nav {
-    justify-content: space-around;
-    padding: 6px 12px;
-    gap: 12px;
-  }
-  nav a {
-    font-size: 0.85rem;
-    padding: 3px 6px;
-  }
-}
-</style>
-
-</head>
-
-<body>
-
-<nav>
-  <a href="chants-noirs.html">Chants noirs</a>
-  <a href="fragments.html">Fragments</a>
-  <a href="chroniques.html">Chroniques</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
-</body>
-</html>
+  letter-spacing: 0
