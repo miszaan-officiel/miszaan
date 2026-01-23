@@ -6,7 +6,6 @@
 
 <title>CHRONIQUES</title>
 
-<!-- POLICE DU MENU -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
@@ -19,62 +18,55 @@ html, body {
 }
 
 body {
-  background: url("images/chroniques-3.jpg") center / cover no-repeat;
+  background: url("images/chroniques.jpg") center / cover no-repeat;
   font-family: 'Montserrat', sans-serif;
 }
 
-/* MENU HORIZONTAL IDENTIQUE ACCUEIL */
+/* MENU HORIZONTAL — HAUT GAUCHE — TOUJOURS VISIBLE */
 nav {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: 24px;
+  left: 32px;
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 6px 0;
-  z-index: 999;
-  flex-wrap: nowrap;
+  gap: 36px;
+  z-index: 9999;
 }
 
+/* LIENS */
 nav a {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 0.75rem;
+  color: #1a1a1a;             /* foncé pour contraste */
+  font-size: 14px;
+  font-weight: 700;           /* épaisseur renforcée */
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #f2f2f2;
+  letter-spacing: 0.35em;
   text-decoration: none;
-  padding: 4px 8px;
   white-space: nowrap;
-  transition: color 0.2s ease, transform 0.2s ease;
+  transition: text-shadow 0.25s ease, transform 0.25s ease;
 }
 
-nav a:hover,
-nav a:active {
-  color: #dddddd;
+/* HALO */
+nav a:hover {
+  text-shadow: 0 0 6px #000000aa;
   transform: scale(1.05);
 }
 
-/* AJUSTEMENT MOBILE */
+/* MOBILE — ON GARDE LE MENU */
 @media screen and (max-width: 768px) {
   nav {
-    justify-content: space-around;
-    padding: 4px 0;
-    gap: 8px;
+    top: 16px;
+    left: 16px;
+    gap: 16px;
   }
+
   nav a {
-    font-size: 0.65rem;
-    padding: 3px 6px;
+    font-size: 12px;
+    letter-spacing: 0.25em;
   }
 }
 </style>
-
 </head>
-<body>
 
-<!-- HAMBURGER MOBILE -->
-<div id="hamburger">☰</div>
+<body>
 
 <nav>
   <a href="index.html">Accueil</a>
