@@ -22,7 +22,7 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* MENU HORIZONTAL — HAUT GAUCHE — TOUJOURS VISIBLE */
+/* MENU — STRICTEMENT IDENTIQUE À ACCUEIL */
 nav {
   position: fixed;
   top: 24px;
@@ -32,9 +32,8 @@ nav {
   z-index: 9999;
 }
 
-/* LIENS */
 nav a {
-  color: #f2f2f2;          /* clair pour contraster avec fond anthracite */
+  color: #f2f2f2;
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
@@ -44,13 +43,11 @@ nav a {
   transition: text-shadow 0.25s ease, transform 0.25s ease;
 }
 
-/* HALO */
 nav a:hover {
   text-shadow: 0 0 6px #ffffffaa;
   transform: scale(1.05);
 }
 
-/* MOBILE — ON GARDE LE MENU */
 @media screen and (max-width: 768px) {
   nav {
     top: 16px;
@@ -64,57 +61,62 @@ nav a:hover {
   }
 }
 
-/* FORMULAIRE CENTRÉ */
+/* FORMULAIRE — CENTRÉ, BAS, LISIBLE */
 form {
   position: absolute;
   left: 50%;
-  top: 60%;
+  top: 62%;
   transform: translate(-50%, -50%);
   width: 380px;
-  background: rgba(255,255,255,0.12); /* contraste suffisant */
-  border-radius: 8px;
   padding: 28px;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  background: rgba(240,240,240,0.15);
   backdrop-filter: blur(3px);
+  border-radius: 8px;
+  box-shadow: 0 0 24px rgba(0,0,0,0.45);
 }
 
 input, textarea {
   font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   padding: 10px;
   border: none;
   border-radius: 4px;
-  background: rgba(255,255,255,0.18);
-  color: #fdf6e3;
-  transition: all 0.25s;
-}
-
-input::placeholder, textarea::placeholder {
-  color: #fdf6e3aa;
-}
-
-input:focus, textarea:focus {
-  outline: none;
   background: rgba(255,255,255,0.25);
-  box-shadow: 0 0 12px rgba(255,255,255,0.45);
+  color: #111;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #333;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  background: rgba(255,255,255,0.35);
 }
 
 button {
-  background-color: rgba(255,255,255,0.18);
-  color: #fdf6e3;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
   font-weight: 700;
-  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
   padding: 10px;
+  border: none;
   border-radius: 4px;
-  transition: all 0.25s;
+  cursor: pointer;
+  background: rgba(255,255,255,0.35);
+  color: #111;
+  transition: background 0.25s ease, box-shadow 0.25s ease;
 }
 
 button:hover {
-  background-color: rgba(255,255,255,0.28);
-  box-shadow: 0 0 12px rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.5);
+  box-shadow: 0 0 10px rgba(255,255,255,0.4);
 }
 </style>
 </head>
@@ -122,6 +124,7 @@ button:hover {
 <body>
 
 <nav>
+  <a href="index.html">Accueil</a>
   <a href="chants-noirs.html">Chants noirs</a>
   <a href="fragments.html">Fragments</a>
   <a href="chroniques.html">Chroniques</a>
