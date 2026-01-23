@@ -8,7 +8,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
 
 <style>
 html, body {
@@ -18,32 +18,61 @@ html, body {
 }
 
 body {
-  font-family: 'Oswald', sans-serif; /* police froide, monolithique, sans empâtement */
   background: url("images/accueil.jpg") center / cover no-repeat;
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* MENU HORIZONTAL — EN HAUT À DROITE */
+/* MENU HORIZONTAL — HAUT GAUCHE — TOUJOURS VISIBLE */
 nav {
   position: fixed;
-  top: 16px;
-  right: 32px;
+  top: 24px;
+  left: 32px;
   display: flex;
-  gap: 30px;
-  z-index: 999;
-  background: none; /* aucun fond */
+  gap: 36px;
+  z-index: 9999;
 }
 
+/* LIENS */
 nav a {
   color: #f2f2f2;
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 14px;
   text-transform: uppercase;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.35em;
   text-decoration: none;
-  transition: all 0.25s ease;
+  white-space: nowrap;
+  transition: text-shadow 0.25s ease, transform 0.25s ease;
 }
 
+/* HALO */
 nav a:hover {
-  color: #f2f2f2;
-  text-shadow: 0 0 6px #ffffff88;
-  tran
+  text-shadow: 0 0 6px #ffffffaa;
+  transform: scale(1.05);
+}
+
+/* MOBILE — ON GARDE LE MENU */
+@media screen and (max-width: 768px) {
+  nav {
+    top: 16px;
+    left: 16px;
+    gap: 16px;
+  }
+
+  nav a {
+    font-size: 12px;
+    letter-spacing: 0.25em;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="chants-noirs.html">Chants noirs</a>
+  <a href="fragments.html">Fragments</a>
+  <a href="chroniques.html">Chroniques</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+</body>
+</html>
