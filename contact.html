@@ -34,7 +34,7 @@ nav {
 
 /* LIENS */
 nav a {
-  color: #f2f2f2;
+  color: #f2f2f2;          /* clair pour contraster avec fond anthracite */
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
@@ -64,51 +64,57 @@ nav a:hover {
   }
 }
 
-/* FORMULAIRE BLOODBONE – CENTRÉ, BAS */
+/* FORMULAIRE CENTRÉ */
 form {
   position: absolute;
   left: 50%;
-  top: 60%; /* assez bas */
+  top: 60%;
   transform: translate(-50%, -50%);
-  width: 350px;
-  background: rgba(0,0,0,0.55); /* semi-transparent, fondu dans le décor */
-  border-radius: 6px 2px 10px 4px;
-  padding: 20px;
+  width: 380px;
+  background: rgba(255,255,255,0.12); /* contraste suffisant */
+  border-radius: 8px;
+  padding: 28px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  box-shadow: 0 0 12px #00000099;
+  gap: 16px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  backdrop-filter: blur(3px);
 }
 
-/* CHAMPS ET BOUTON */
-input, textarea, button {
+input, textarea {
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
-  padding: 8px;
-  border: none; /* contours rouges supprimés */
-  border-radius: 4px 2px 6px 3px;
-  background: rgba(26,26,26,0.6);
-  color: #f2f2f2;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.18);
+  color: #fdf6e3;
   transition: all 0.25s;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #fdf6e3aa;
 }
 
 input:focus, textarea:focus {
   outline: none;
-  box-shadow: 0 0 8px #ffffff44;
+  background: rgba(255,255,255,0.25);
+  box-shadow: 0 0 12px rgba(255,255,255,0.45);
 }
 
 button {
-  background-color: rgba(40,0,0,0.7);
-  color: #f2f2f2;
+  background-color: rgba(255,255,255,0.18);
+  color: #fdf6e3;
   font-weight: 700;
   cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
   transition: all 0.25s;
-  border-radius: 4px 2px 6px 3px;
 }
 
 button:hover {
-  background-color: rgba(60,0,0,0.8);
-  box-shadow: 0 0 10px #ffffff33;
+  background-color: rgba(255,255,255,0.28);
+  box-shadow: 0 0 12px rgba(255,255,255,0.5);
 }
 </style>
 </head>
@@ -116,7 +122,6 @@ button:hover {
 <body>
 
 <nav>
-  <a href="index.html">Accueil</a>
   <a href="chants-noirs.html">Chants noirs</a>
   <a href="fragments.html">Fragments</a>
   <a href="chroniques.html">Chroniques</a>
@@ -126,7 +131,7 @@ button:hover {
   <input type="text" name="name" placeholder="Nom" required>
   <input type="email" name="email" placeholder="Email" required>
   <input type="text" name="subject" placeholder="Objet" required>
-  <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+  <textarea name="message" placeholder="Votre message" rows="6" required></textarea>
   <button type="submit">Envoyer</button>
 </form>
 
