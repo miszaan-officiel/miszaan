@@ -2,284 +2,74 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ACCUEIL</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
 
 <style>
 html, body {
   margin: 0;
   width: 100%;
   height: 100%;
-}
-
-body {
-  font-family: 'IM Fell English SC', serif;
+  font-family: 'Roboto Mono', monospace;
   background: url("images/accueil.jpg") center / cover no-repeat;
 }
 
-/* MENU VERTICAL GAUCHE */
-nav {
-  position: absolute;
-  top: 48px;
-  left: 32px;   
-  display: flex;
-  flex-direction: column; /* vertical */
-  gap: 40px; /* espace suffisant pour respirer */
-}
-
-nav a {
-  text-decoration: none;
-  font-size: 20px; /* taille originale, bien lisible */
-  font-weight: normal;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: #f2f2f2;
-  padding-bottom: 6px;
-  transition: color 0.25s, text-shadow 0.25s;
-}
-
-/* Halo sur survol universel BloodBone */
-nav a:hover {
-  color: #f2f2f2;
-  text-shadow: 0 0 6px #ffffff88;
-}
-</style>
-<link rel="stylesheet" href="style-mobile.css">
-  <style>
-/* === MENU DESKTOP === */
+/* MENU HORIZONTAL */
 nav {
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
   display: flex;
-  gap: 24px;
-  padding: 16px 24px;
-  z-index: 1000;
+  justify-content: flex-start; /* à gauche */
+  gap: 40px;
+  padding: 16px 32px;
+  background: rgba(0,0,0,0.5);
+  z-index: 999;
 }
 
 nav a {
-  font-size: 16px;
-  color: #eaeaea;
   text-decoration: none;
-  letter-spacing: 0.18em;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #f2f2f2;
+  transition: all 0.25s;
 }
 
-/* === MOBILE : ON CACHE LE MENU === */
+nav a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px #ffffff88;
+  transform: scale(1.05);
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
   nav {
-    display: none;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 16px;
+  }
+  nav a {
+    font-size: 0.95rem;
+    letter-spacing: 0.2em;
+    padding: 4px 6px;
   }
 }
 </style>
-
 </head>
 
 <body>
-<style>
-@media screen and (max-width: 768px) {
-  nav {
-    position: fixed !important;
-    top: 12px !important;
-    left: 12px !important;
-    right: 12px !important;
-    background: rgba(10, 10, 10, 0.85) !important;
-    padding: 12px 18px !important;
-    border-radius: 6px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 12px !important;
-    z-index: 999 !important;
-  }
-
-  nav a {
-    color: #f2f2f2 !important;
-    font-size: 1rem !important;
-    letter-spacing: 0.18em !important;
-    text-transform: uppercase !important;
-    text-decoration: none !important;
-    padding: 6px 0 !important;
-    text-shadow: 0 0 3px rgba(0,0,0,0.8) !important;
-  }
-
-  nav a + a {
-    margin-top: 8px !important;
-  }
-
-  nav a:hover {
-    text-shadow: 0 0 6px #ffffff88 !important;
-  }
-}
-</style>
-<style>
-/* === MENU BLOODBONE HORIZONTAL POUR DESKTOP + MOBILE === */
-
-/* Desktop & mobile large */
-nav {
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  display: flex !important;
-  justify-content: center !important; /* centré horizontalement */
-  gap: 40px !important;
-  padding: 16px 0 !important;
-  background: rgba(15, 10, 10, 0.85) !important; /* sombre, semi-transparent */
-  box-shadow: 0 2px 15px #00000088 inset, 0 0 20px #88000044 !important;
-  z-index: 999 !important;
-  border-bottom: 2px solid #880000 !important;
-}
-
-/* Liens du menu */
-nav a {
-  color: #ffdddd !important;
-  font-size: 1.1rem !important;
-  font-weight: bold !important;
-  letter-spacing: 0.2em !important;
-  text-transform: uppercase !important;
-  text-decoration: none !important;
-  padding: 8px 12px !important;
-  text-shadow: 0 0 5px #55000088, 0 0 8px #ff111188 !important;
-  transition: all 0.2s ease-in-out !important;
-}
-
-nav a:hover {
-  color: #ff8888 !important;
-  text-shadow: 0 0 10px #ff2222, 0 0 15px #ff5555 !important;
-  transform: scale(1.1) !important;
-}
-
-/* === Ajustements mobile === */
-@media screen and (max-width: 768px) {
-  nav {
-    flex-direction: row !important; /* horizontal */
-    justify-content: space-around !important;
-    gap: 12px !important;
-    padding: 10px 0 !important;
-  }
-
-  nav a {
-    font-size: 1rem !important;
-    padding: 6px 8px !important;
-  }
-}
-</style>
-<style>
-/* === MENU BLOODBONE HORIZONTAL ULTRA-LISIBLE === */
-nav {
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  display: flex !important;
-  justify-content: center !important;
-  flex-wrap: wrap !important; /* permet aux liens de passer à la ligne */
-  gap: 20px !important;
-  padding: 10px 0 !important;
-  background: rgba(15,10,10,0.85) !important; /* semi-transparent */
-  box-shadow: 0 0 15px #55000044 inset, 0 0 20px #88000033 !important;
-  z-index: 999 !important;
-  border-bottom: none !important; /* supprime la ligne rouge moche */
-}
-
-/* Liens menu */
-nav a {
-  color: #ffdddd !important;
-  font-size: 1rem !important; /* taille cohérente */
-  font-weight: bold !important;
-  letter-spacing: 0.15em !important;
-  text-transform: uppercase !important;
-  text-decoration: none !important;
-  padding: 6px 10px !important;
-  text-shadow: 0 0 4px #55000088, 0 0 6px #ff111188 !important;
-  white-space: nowrap !important; /* pas de coupure de mot */
-  transition: all 0.2s ease-in-out !important;
-}
-
-nav a:hover {
-  color: #ff8888 !important;
-  text-shadow: 0 0 10px #ff2222, 0 0 15px #ff5555 !important;
-  transform: scale(1.05) !important;
-}
-
-/* Ajustement mobile */
-@media screen and (max-width: 768px) {
-  nav {
-    justify-content: space-around !important;
-    gap: 12px !important;
-    padding: 8px 0 !important;
-  }
-  
-  nav a {
-    font-size: 0.9rem !important; /* réduit légèrement pour éviter tronquage */
-    padding: 4px 6px !important;
-  }
-}
-</style>
-<style>
-/* === MENU HORIZONTAL BLOODBONE MINIMALISTE === */
-nav {
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  display: flex !important;
-  justify-content: center !important; /* tous les liens centrés */
-  align-items: center !important;
-  gap: 20px !important; /* espace entre les liens */
-  padding: 6px 0 !important;
-  background: none !important; /* rien derrière */
-  border: none !important;
-  box-shadow: none !important;
-  z-index: 999 !important;
-  flex-wrap: nowrap !important; /* pas de retour à la ligne, tout tient */
-}
-
-/* Liens du menu */
-nav a {
-  color: #f2f2f2 !important; /* blanc doux, lisible sur tous les fonds */
-  font-size: 0.75rem !important; /* réduit pour tenir sur une ligne */
-  font-weight: bold !important;
-  letter-spacing: 0.1em !important;
-  text-transform: uppercase !important;
-  text-decoration: none !important;
-  padding: 4px 8px !important;
-  white-space: nowrap !important;
-  transition: color 0.2s ease, transform 0.2s ease !important;
-}
-
-/* Survol / clic discret */
-nav a:hover,
-nav a:active {
-  color: #dddddd !important; /* discret, plus de rouge dégueulasse */
-  transform: scale(1.05) !important;
-}
-
-/* Ajustement mobile */
-@media screen and (max-width: 768px) {
-  nav {
-    justify-content: space-around !important;
-    padding: 4px 0 !important;
-    gap: 8px !important;
-  }
-  nav a {
-    font-size: 0.65rem !important; /* encore plus petit si nécessaire */
-    padding: 3px 6px !important;
-  }
-}
-</style>
-<!-- HAMBURGER MOBILE -->
-<div id="hamburger">☰</div>
 <nav>
   <a href="chants-noirs.html">Chants noirs</a>
   <a href="fragments.html">Fragments</a>
   <a href="chroniques.html">Chroniques</a>
   <a href="contact.html">Contact</a>
 </nav>
-
 </body>
 </html>
