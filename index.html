@@ -6,10 +6,9 @@
 
 <title>ACCUEIL</title>
 
-<!-- Police froide, sans empâtement pour le menu -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
 
 <style>
 html, body {
@@ -19,27 +18,67 @@ html, body {
 }
 
 body {
-  font-family: 'IM Fell English SC', serif; /* texte général */
+  font-family: 'IM Fell English SC', serif;
   background: url("images/accueil.jpg") center / cover no-repeat;
 }
 
-/* MENU HORIZONTAL BLOODBONE – visible et minimaliste */
+/* MENU HORIZONTAL — SANS FOND */
 nav {
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
   display: flex;
-  justify-content: flex-start; /* menu à gauche pour ne pas gêner la marque */
-  gap: 32px;
-  padding: 16px 24px;
-  background: none; /* pas de fond derrière */
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 6px 0;
+  background: none;
   z-index: 999;
-  font-family: 'Oswald', sans-serif; /* police froide, sans empâtement */
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
 }
 
-/* Liens du menu */
 nav a {
   color: #f2f2f2;
-  font
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 4px 8px;
+  white-space: nowrap;
+  transition: color 0.2s ease, transform 0.2s ease, text-shadow 0.2s ease;
+}
+
+nav a:hover {
+  color: #f2f2f2;
+  text-shadow: 0 0 6px #ffffff88;
+  transform: scale(1.05);
+}
+
+/* MOBILE */
+@media screen and (max-width: 768px) {
+  nav {
+    justify-content: space-around;
+    padding: 4px 0;
+    gap: 8px;
+  }
+
+  nav a {
+    font-size: 0.65rem;
+    padding: 3px 6px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="chants-noirs.html">Chants noirs</a>
+  <a href="fragments.html">Fragments</a>
+  <a href="chroniques.html">Chroniques</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+</body>
+</html>
