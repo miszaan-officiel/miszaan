@@ -6,9 +6,10 @@
 
 <title>CHRONIQUES</title>
 
+<!-- POLICE DU MENU -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 
 <style>
 html, body {
@@ -18,44 +19,62 @@ html, body {
 }
 
 body {
-  font-family: 'IM Fell English SC', serif;
   background: url("images/chroniques-3.jpg") center / cover no-repeat;
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* MENU HORIZONTAL BLOODBONE – IDENTIQUE À ACCUEIL */
+/* MENU HORIZONTAL IDENTIQUE ACCUEIL */
 nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   display: flex;
-  justify-content: flex-start; /* aligné à gauche */
-  gap: 24px;
-  padding: 16px 32px;
+  justify-content: center;
+  gap: 20px;
+  padding: 6px 0;
   z-index: 999;
+  flex-wrap: nowrap;
 }
 
 nav a {
-  font-family: 'Antonio', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
+  color: #f2f2f2;
   text-decoration: none;
-  color: #1a1a1a; /* foncé pour contraste */
-  padding: 8px 12px;
-  transition: all 0.2s ease-in-out;
+  padding: 4px 8px;
+  white-space: nowrap;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
-nav a:hover {
-  text-shadow: 0 0 6px #00000088;
+nav a:hover,
+nav a:active {
+  color: #dddddd;
   transform: scale(1.05);
+}
+
+/* AJUSTEMENT MOBILE */
+@media screen and (max-width: 768px) {
+  nav {
+    justify-content: space-around;
+    padding: 4px 0;
+    gap: 8px;
+  }
+  nav a {
+    font-size: 0.65rem;
+    padding: 3px 6px;
+  }
 }
 </style>
 
 </head>
-
 <body>
+
+<!-- HAMBURGER MOBILE -->
+<div id="hamburger">☰</div>
 
 <nav>
   <a href="index.html">Accueil</a>
