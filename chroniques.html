@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>CHRONIQUES</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&display=swap" rel="stylesheet">
 
 <style>
 html, body {
@@ -21,39 +22,37 @@ body {
   background: url("images/chroniques-3.jpg") center / cover no-repeat;
 }
 
-/* === MENU HORIZONTAL IDENTIQUE À ACCUEIL === */
+/* MENU HORIZONTAL BLOODBONE – IDENTIQUE À ACCUEIL */
 nav {
   position: fixed;
-  top: 48px;
-  left: 32px;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
-  gap: 40px;
-  z-index: 1000;
+  justify-content: flex-start; /* aligné à gauche */
+  gap: 24px;
+  padding: 16px 32px;
+  z-index: 999;
 }
 
 nav a {
-  font-size: 1rem;
-  font-weight: bold;
-  letter-spacing: 0.18em;
+  font-family: 'Antonio', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
   text-transform: uppercase;
+  letter-spacing: 0.2em;
   text-decoration: none;
-  color: #111111; /* FONCÉ POUR CONTRASTE */
-  padding-bottom: 6px;
-  transition: color 0.25s, text-shadow 0.25s;
+  color: #1a1a1a; /* foncé pour contraste */
+  padding: 8px 12px;
+  transition: all 0.2s ease-in-out;
 }
 
 nav a:hover {
-  color: #111111;
-  text-shadow: 0 0 6px #ffffff88;
-}
-
-/* MOBILE — menu masqué pour l'instant */
-@media (max-width: 768px) {
-  nav {
-    display: none;
-  }
+  text-shadow: 0 0 6px #00000088;
+  transform: scale(1.05);
 }
 </style>
+
 </head>
 
 <body>
