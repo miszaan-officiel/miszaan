@@ -3,73 +3,85 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ACCUEIL</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
 
 <style>
 html, body {
   margin: 0;
   width: 100%;
   height: 100%;
-  font-family: 'Roboto Mono', monospace;
+}
+
+body {
+  font-family: 'IM Fell English SC', serif;
   background: url("images/accueil.jpg") center / cover no-repeat;
 }
 
-/* MENU HORIZONTAL */
+/* MENU HORIZONTAL MINIMALISTE */
 nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   display: flex;
-  justify-content: flex-start; /* à gauche */
-  gap: 40px;
-  padding: 16px 32px;
-  background: rgba(0,0,0,0.5);
+  justify-content: flex-start; /* positionné à gauche, jamais sur la marque */
+  gap: 20px;
+  padding: 6px 24px; /* laisse respirer et ne touche pas la marque */
+  background: none; /* supprimé */
+  border: none; /* supprimé */
+  box-shadow: none; /* supprimé */
   z-index: 999;
 }
 
+/* Liens du menu */
 nav a {
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 500;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
   color: #f2f2f2;
-  transition: all 0.25s;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 4px 8px;
+  white-space: nowrap;
+  transition: color 0.25s ease, text-shadow 0.25s ease, transform 0.25s ease;
 }
 
+/* Halo sur survol */
 nav a:hover {
-  color: #ffffff;
-  text-shadow: 0 0 8px #ffffff88;
+  color: #f2f2f2;
+  text-shadow: 0 0 6px #ffffff88;
   transform: scale(1.05);
 }
 
 /* MOBILE */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   nav {
-    justify-content: center;
-    gap: 20px;
-    padding: 10px 16px;
+    justify-content: space-around;
+    padding: 6px 12px;
+    gap: 12px;
   }
   nav a {
-    font-size: 0.95rem;
-    letter-spacing: 0.2em;
-    padding: 4px 6px;
+    font-size: 0.85rem;
+    padding: 3px 6px;
   }
 }
 </style>
+
 </head>
 
 <body>
+
 <nav>
   <a href="chants-noirs.html">Chants noirs</a>
   <a href="fragments.html">Fragments</a>
   <a href="chroniques.html">Chroniques</a>
   <a href="contact.html">Contact</a>
 </nav>
+
 </body>
 </html>
