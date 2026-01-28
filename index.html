@@ -22,7 +22,7 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* MENU HORIZONTAL DESKTOP — inchangé */
+/* MENU DESKTOP — inchangé */
 nav.desktop {
   position: fixed;
   top: 24px;
@@ -48,28 +48,27 @@ nav.desktop a:hover {
   transform: scale(1.05);
 }
 
-/* HAMBURGER MOBILE */
+/* HAMBURGER MOBILE — à gauche, visible */
 #hamburger {
-  display: none; /* caché sur desktop */
+  display: none; /* caché desktop */
   position: fixed;
   top: 24px;
-  left: 32px; /* gauche */
+  left: 32px;
   font-size: 28px;
-  color: #f2f2f2; /* clair pour visibilité */
+  color: #f2e5d0; /* clair pour visibilité */
   z-index: 9999;
   cursor: pointer;
 }
 
-/* MENU MOBILE — caché par défaut */
+/* MENU MOBILE — minimaliste et discret */
 nav.mobile {
   display: none;
   flex-direction: column;
   position: fixed;
-  top: 0;
+  top: 60px; /* juste sous le hamburger */
   left: 0;
   width: 100%;
-  background-color: rgba(0,0,0,0.95); /* fond noir derrière les liens */
-  padding-top: 70px; /* pour ne pas recouvrir le hamburger */
+  padding: 0;
   z-index: 9998;
 }
 
@@ -81,16 +80,17 @@ nav.mobile a {
   text-decoration: none;
   font-size: 18px;
   padding: 12px 24px;
-  border-bottom: 1px solid #444;
+  background-color: rgba(0,0,0,0.25); /* très discret, juste pour lisibilité */
+  border-bottom: 1px solid #222;
   transition: background 0.25s, transform 0.25s;
 }
 
 nav.mobile a:hover {
-  background: #222;
+  background: rgba(0,0,0,0.4);
   transform: scale(1.03);
 }
 
-/* RESPONSIVE — mobile */
+/* RESPONSIVE */
 @media screen and (max-width: 768px) {
   nav.desktop {
     display: none;
