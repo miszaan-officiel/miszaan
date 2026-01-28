@@ -22,8 +22,8 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* MENU — STRICTEMENT IDENTIQUE À ACCUEIL */
-nav {
+/* MENU DESKTOP — inchangé */
+nav.desktop {
   position: fixed;
   top: 24px;
   left: 32px;
@@ -32,8 +32,8 @@ nav {
   z-index: 9999;
 }
 
-nav a {
-  color: #f2f2f2;
+nav.desktop a {
+  color: #f2f2f2; /* blanc desktop */
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
@@ -43,100 +43,151 @@ nav a {
   transition: text-shadow 0.25s ease, transform 0.25s ease;
 }
 
-nav a:hover {
+nav.desktop a:hover {
   text-shadow: 0 0 6px #ffffffaa;
   transform: scale(1.05);
 }
 
-@media screen and (max-width: 768px) {
-  nav {
-    top: 16px;
-    left: 16px;
-    gap: 16px;
-  }
-
-  nav a {
-    font-size: 12px;
-    letter-spacing: 0.25em;
-  }
+/* HAMBURGER MOBILE — à gauche, blanc */
+#hamburger {
+  display: none; /* caché desktop */
+  position: fixed;
+  top: 24px;
+  left: 32px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  z-index: 9999;
 }
 
-/* FORMULAIRE — CENTRÉ, BAS, LISIBLE */
-form {
-  position: absolute;
-  left: 50%;
-  top: 62%;
-  transform: translate(-50%, -50%);
-  width: 380px;
-  padding: 28px;
-  display: flex;
+#hamburger span {
+  display: block;
+  height: 4px;
+  margin: 6px 0;
+  background-color: #f2f2f2; /* blanc */
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* MENU MOBILE — minimaliste et discret */
+nav.mobile {
+  display: none;
   flex-direction: column;
-  gap: 16px;
-  background: rgba(240,240,240,0.15);
-  backdrop-filter: blur(3px);
-  border-radius: 8px;
-  box-shadow: 0 0 24px rgba(0,0,0,0.45);
+  position: fixed;
+  top: 64px; /* juste sous le hamburger */
+  left: 0;
+  width: 100%;
+  padding: 0;
+  z-index: 9998;
 }
 
-input, textarea {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  background: rgba(255,255,255,0.25);
-  color: #111;
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: #333;
-}
-
-input:focus,
-textarea:focus {
-  outline: none;
-  background: rgba(255,255,255,0.35);
-}
-
-button {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
+nav.mobile a {
+  color: #f2f2f2; /* blanc */
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  background: rgba(255,255,255,0.35);
-  color: #111;
-  transition: background 0.25s ease, box-shadow 0.25s ease;
+  letter-spacing: 0.35em;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 12px 24px;
+  background-color: rgba(0,0,0,0.25); /* discret */
+  border-bottom: 1px solid #222;
+  transition: background 0.25s, transform 0.25s;
 }
 
-button:hover {
-  background: rgba(255,255,255,0.5);
-  box-shadow: 0 0 10px rgba(255,255,255,0.4);
+nav.mobile a:hover {
+  background: rgba(0,0,0,0.4);
+  transform: scale(1.03);
+}
+
+/* FORMULAIRE CONTACT MOBILE — largeur réduite et centré */
+form {
+  max-width: 90%; /* réduit pour mobile */
+  margin: 150px auto 0 auto; /* centré et pas trop haut */
+  padding: 16px;
+  background-color: rgba(0,0,0,0.25);
+  color: #f2f2f2;
+  border-radius: 6px;
+}
+
+form input, form textarea, form button {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+form button {
+  background-color: #f2f2f2;
+  color: #000000;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+
+form button:hover {
+  background-color: #ddd;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  nav.desktop {
+    display: none;
+  }
+  #hamburger {
+    display: block;
+  }
 }
 </style>
-</head>
 
+</head>
 <body>
 
-<nav>
+<!-- MENU DESKTOP -->
+<nav class="desktop">
   <a href="index.html">Accueil</a>
   <a href="chants-noirs.html">Chants noirs</a>
   <a href="fragments.html">Fragments</a>
   <a href="chroniques.html">Chroniques</a>
 </nav>
 
-<form action="https://formspree.io/f/xojjbkqk" method="POST">
-  <input type="text" name="name" placeholder="Nom" required>
-  <input type="email" name="email" placeholder="Email" required>
-  <input type="text" name="subject" placeholder="Objet" required>
-  <textarea name="message" placeholder="Votre message" rows="6" required></textarea>
+<!-- HAMBURGER MOBILE -->
+<div id="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<!-- MENU MOBILE -->
+<nav class="mobile" id="mobileMenu">
+  <a href="index.html">Accueil</a>
+  <a href="chants-noirs.html">Chants noirs</a>
+  <a href="fragments.html">Fragments</a>
+  <a href="chroniques.html">Chroniques</a>
+</nav>
+
+<!-- FORMULAIRE CONTACT -->
+<form>
+  <input type="text" placeholder="Nom" required>
+  <input type="email" placeholder="Email" required>
+  <textarea rows="5" placeholder="Message" required></textarea>
   <button type="submit">Envoyer</button>
 </form>
+
+<script>
+// Toggle menu mobile
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+
+hamburger.addEventListener('click', () => {
+  if (mobileMenu.style.display === 'flex') {
+    mobileMenu.style.display = 'none';
+  } else {
+    mobileMenu.style.display = 'flex';
+  }
+});
+</script>
 
 </body>
 </html>
