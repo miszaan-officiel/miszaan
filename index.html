@@ -22,7 +22,9 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* MENU HORIZONTAL — HAUT GAUCHE — TOUJOURS VISIBLE */
+/* =========================
+   MENU — DESKTOP (RÉFÉRENCE)
+   ========================= */
 nav {
   position: fixed;
   top: 24px;
@@ -32,11 +34,10 @@ nav {
   z-index: 9999;
 }
 
-/* LIENS */
 nav a {
   color: #f2f2f2;
   font-size: 14px;
-  font-weight: 700;           /* épaisseur renforcée */
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.35em;
   text-decoration: none;
@@ -44,18 +45,20 @@ nav a {
   transition: text-shadow 0.25s ease, transform 0.25s ease;
 }
 
-/* HALO */
 nav a:hover {
   text-shadow: 0 0 6px #ffffffaa;
   transform: scale(1.05);
 }
 
-/* MOBILE — ON GARDE LE MENU */
+/* =========================
+   MOBILE — TEST RÉEL
+   ========================= */
 @media screen and (max-width: 768px) {
+
   nav {
     top: 16px;
     left: 16px;
-    gap: 16px;
+    gap: 18px;
   }
 
   nav a {
@@ -69,6 +72,7 @@ nav a:hover {
 <body>
 
 <nav>
+  <a href="index.html">Accueil</a>
   <a href="chants-noirs.html">Chants noirs</a>
   <a href="fragments.html">Fragments</a>
   <a href="chroniques.html">Chroniques</a>
