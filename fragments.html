@@ -22,8 +22,8 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* MENU HORIZONTAL — DESKTOP */
-nav {
+/* MENU DESKTOP — inchangé */
+nav.desktop {
   position: fixed;
   top: 24px;
   left: 32px;
@@ -32,9 +32,8 @@ nav {
   z-index: 9999;
 }
 
-/* LIENS DESKTOP */
-nav a {
-  color: #ffffff;
+nav.desktop a {
+  color: #f2f2f2; /* blanc */
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
@@ -44,93 +43,109 @@ nav a {
   transition: text-shadow 0.25s ease, transform 0.25s ease;
 }
 
-nav a:hover {
+nav.desktop a:hover {
   text-shadow: 0 0 6px #ffffffaa;
   transform: scale(1.05);
 }
 
-/* HAMBURGER MOBILE */
+/* HAMBURGER MOBILE — à gauche, blanc */
 #hamburger {
-  display: none;
+  display: none; /* caché desktop */
   position: fixed;
-  top: 16px;
-  left: 16px;
-  font-size: 28px;
-  color: #ffffff; /* hamburger blanc */
-  z-index: 10000;
+  top: 24px;
+  left: 32px;
+  width: 36px;
+  height: 36px;
   cursor: pointer;
-}
-
-/* MENU VERTICAL — MOBILE */
-.mobile-menu {
-  display: none;
-  position: fixed;
-  top: 60px;
-  left: 16px;
-  flex-direction: column;
-  gap: 20px;
-  background: rgba(0,0,0,0.5); /* léger fond derrière les onglets */
-  padding: 12px 16px;
-  border-radius: 6px;
   z-index: 9999;
 }
 
-.mobile-menu a {
-  color: #ffff00; /* jaune vif pour lisibilité */
+#hamburger span {
+  display: block;
+  height: 4px;
+  margin: 6px 0;
+  background-color: #f2f2f2; /* blanc identique desktop */
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* MENU MOBILE — minimaliste et discret */
+nav.mobile {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 64px; /* juste sous le hamburger */
+  left: 0;
+  width: 100%;
+  padding: 0;
+  z-index: 9998;
+}
+
+nav.mobile a {
+  color: #ffff00; /* jaune vif pour FRAGMENTS */
   font-weight: 700;
-  text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 0.25em;
-  transition: text-shadow 0.25s ease, transform 0.25s ease;
+  letter-spacing: 0.35em;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 12px 24px;
+  background-color: rgba(0,0,0,0.25); /* discret */
+  border-bottom: 1px solid #222;
+  transition: background 0.25s, transform 0.25s;
 }
 
-.mobile-menu a:hover {
-  text-shadow: 0 0 6px #ffffffaa;
-  transform: scale(1.05);
+nav.mobile a:hover {
+  background: rgba(0,0,0,0.4);
+  transform: scale(1.03);
 }
 
-/* MOBILE — affichage */
+/* RESPONSIVE */
 @media screen and (max-width: 768px) {
-  nav {
-    display: none; /* on masque le desktop horizontal */
+  nav.desktop {
+    display: none;
   }
   #hamburger {
     display: block;
   }
 }
 </style>
-</head>
 
+</head>
 <body>
 
-<!-- HAMBURGER -->
-<div id="hamburger">☰</div>
-
 <!-- MENU DESKTOP -->
-<nav>
+<nav class="desktop">
   <a href="index.html">Accueil</a>
   <a href="chants-noirs.html">Chants noirs</a>
   <a href="chroniques.html">Chroniques</a>
   <a href="contact.html">Contact</a>
 </nav>
 
+<!-- HAMBURGER MOBILE -->
+<div id="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
 <!-- MENU MOBILE -->
-<div class="mobile-menu" id="mobileMenu">
+<nav class="mobile" id="mobileMenu">
   <a href="index.html">Accueil</a>
   <a href="chants-noirs.html">Chants noirs</a>
   <a href="chroniques.html">Chroniques</a>
   <a href="contact.html">Contact</a>
-</div>
+</nav>
 
 <script>
+// Toggle menu mobile
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 
 hamburger.addEventListener('click', () => {
-  if (mobileMenu.style.display === "flex") {
-    mobileMenu.style.display = "none";
+  if (mobileMenu.style.display === 'flex') {
+    mobileMenu.style.display = 'none';
   } else {
-    mobileMenu.style.display = "flex";
+    mobileMenu.style.display = 'flex';
   }
 });
 </script>
