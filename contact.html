@@ -69,7 +69,7 @@ nav.desktop a:hover {
   transition: 0.3s;
 }
 
-/* MENU MOBILE — minimaliste et identique aux autres pages mobile */
+/* MENU MOBILE — fond semi-transparent sombre identique aux autres pages */
 nav.mobile {
   display: none;
   flex-direction: column;
@@ -78,24 +78,24 @@ nav.mobile {
   left: 0;
   width: 100%;
   padding: 0;
-  background-color: rgba(255,255,255,0.95); /* blanc semi-transparent comme les autres pages */
+  background-color: rgba(0,0,0,0.25); /* semi-transparent sombre */
   z-index: 9998;
 }
 
 nav.mobile a {
-  color: #111; /* texte noir lisible sur fond blanc */
+  color: #ffffff; /* blanc lisible */
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.35em;
   text-decoration: none;
   font-size: 18px;
   padding: 12px 24px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
   transition: background 0.25s, transform 0.25s;
 }
 
 nav.mobile a:hover {
-  background: rgba(0,0,0,0.05);
+  background: rgba(255,255,255,0.05);
   transform: scale(1.03);
 }
 
@@ -105,7 +105,7 @@ form {
   left: 50%;
   top: 62%;
   transform: translate(-50%, -50%);
-  width: 380px;
+  width: 380px; /* inchangé desktop */
   padding: 28px;
   display: flex;
   flex-direction: column;
@@ -165,10 +165,11 @@ button:hover {
   #hamburger {
     display: block;
   }
+
   form {
     position: static;
     transform: none;
-    width: 90%;
+    width: 90%; /* réduit pour mobile */
     margin: 150px auto 0 auto;
   }
 }
