@@ -22,7 +22,7 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* MENU HORIZONTAL — HAUT GAUCHE — TOUJOURS VISIBLE */
+/* MENU DESKTOP — HAUT GAUCHE */
 nav {
   position: fixed;
   top: 24px;
@@ -32,11 +32,11 @@ nav {
   z-index: 9999;
 }
 
-/* LIENS */
+/* LIENS DESKTOP */
 nav a {
-  color: #f2f2f2;       /* blanc pour contraster avec fond rouge/latérite */
+  color: #f2f2f2;   /* blanc pour desktop */
   font-size: 14px;
-  font-weight: 700;      /* épaisseur renforcée */
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.35em;
   text-decoration: none;
@@ -44,23 +44,62 @@ nav a {
   transition: text-shadow 0.25s ease, transform 0.25s ease;
 }
 
-/* HALO */
+/* HALO DESKTOP */
 nav a:hover {
   text-shadow: 0 0 6px #ffffffaa;
   transform: scale(1.05);
 }
 
-/* MOBILE — ON GARDE LE MENU */
+/* HAMBURGER MOBILE */
+#hamburger {
+  display: none;
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  font-size: 28px;
+  color: #ffffff;  /* blanc pour être visible */
+  z-index: 10000;
+  cursor: pointer;
+}
+
+/* MENU MOBILE — DÉROULÉ */
+#mobileMenu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  flex-direction: column;
+  padding: 64px 0 0 0;
+  background: rgba(0,0,0,0.3);  /* discret, minimaliste */
+  align-items: center;
+  z-index: 9998;
+}
+
+#mobileMenu a {
+  display: block;
+  margin: 12px 0;
+  color: #ffff00;  /* jaune vif pour lisibilité sur FRAGMENTS */
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.35em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: text-shadow 0.25s ease, transform 0.25s ease;
+}
+
+#mobileMenu a:hover {
+  text-shadow: 0 0 6px #ffffffaa;
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE MOBILE */
 @media screen and (max-width: 768px) {
   nav {
-    top: 16px;
-    left: 16px;
-    gap: 16px;
+    display: none;  /* desktop menu caché */
   }
-
-  nav a {
-    font-size: 12px;
-    letter-spacing: 0.25em;
+  #hamburger {
+    display: block;
   }
 }
 </style>
@@ -68,12 +107,35 @@ nav a:hover {
 
 <body>
 
+<!-- Desktop menu -->
 <nav>
   <a href="index.html">Accueil</a>
   <a href="chants-noirs.html">Chants noirs</a>
   <a href="chroniques.html">Chroniques</a>
   <a href="contact.html">Contact</a>
 </nav>
+
+<!-- Hamburger et menu mobile -->
+<div id="hamburger">☰</div>
+<div id="mobileMenu">
+  <a href="index.html">Accueil</a>
+  <a href="chants-noirs.html">Chants noirs</a>
+  <a href="chroniques.html">Chroniques</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+
+hamburger.addEventListener('click', () => {
+  if (mobileMenu.style.display === 'flex') {
+    mobileMenu.style.display = 'none';
+  } else {
+    mobileMenu.style.display = 'flex';
+  }
+});
+</script>
 
 </body>
 </html>
