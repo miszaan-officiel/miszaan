@@ -22,7 +22,7 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* MENU HORIZONTAL — HAUT GAUCHE — TOUJOURS VISIBLE */
+/* MENU HORIZONTAL DESKTOP — HAUT GAUCHE */
 nav {
   position: fixed;
   top: 24px;
@@ -32,11 +32,10 @@ nav {
   z-index: 9999;
 }
 
-/* LIENS */
 nav a {
   color: #f2f2f2;
   font-size: 14px;
-  font-weight: 700;           /* épaisseur renforcée */
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.35em;
   text-decoration: none;
@@ -44,39 +43,82 @@ nav a {
   transition: text-shadow 0.25s ease, transform 0.25s ease;
 }
 
-/* HALO */
 nav a:hover {
   text-shadow: 0 0 6px #ffffffaa;
   transform: scale(1.05);
 }
 
-/* MOBILE — ADAPTATION DU MENU HORIZONTAL */
-@media screen and (max-width: 768px) {
-  nav {
-    top: 16px;
-    left: 16px;
-    right: 16px;
-    justify-content: space-between;
-    gap: 8px;
-    flex-wrap: nowrap;
-  }
+/* HAMBURGER MOBILE */
+#hamburger {
+  display: none;
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  font-size: 28px;
+  color: #f2f2f2;
+  cursor: pointer;
+  z-index: 10000;
+}
 
-  nav a {
-    font-size: 12px;
-    letter-spacing: 0.25em;
-  }
+/* MENU MOBILE VERTICAL — CACHÉ PAR DÉFAUT */
+nav.mobile {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 60px;
+  left: 16px;
+  background: rgba(0,0,0,0.85);
+  padding: 16px;
+  border-radius: 6px;
+  gap: 16px;
+}
+
+nav.mobile a {
+  font-size: 16px;
+  letter-spacing: 0.25em;
+}
+
+/* AFFICHAGE DESKTOP — PAS DE HAMBURGER */
+@media screen and (min-width: 769px) {
+  #hamburger { display: none; }
+  nav { display: flex !important; }
+}
+
+/* AFFICHAGE MOBILE — HAMBURGER ACTIVÉ */
+@media screen and (max-width: 768px) {
+  nav { display: none; }
+  #hamburger { display: block; }
 }
 </style>
 </head>
 
 <body>
 
-<nav>
+<div id="hamburger">☰</div>
+
+<nav class="mobile" id="mobileMenu">
   <a href="chants-noirs.html">Chants noirs</a>
   <a href="fragments.html">Fragments</a>
   <a href="chroniques.html">Chroniques</a>
   <a href="contact.html">Contact</a>
 </nav>
+
+<!-- Desktop nav pour grand écran -->
+<nav class="desktop">
+  <a href="chants-noirs.html">Chants noirs</a>
+  <a href="fragments.html">Fragments</a>
+  <a href="chroniques.html">Chroniques</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<script>
+// Toggle du menu mobile
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  mobileMenu.style.display = mobileMenu.style.display === 'flex' ? 'none' : 'flex';
+});
+</script>
 
 </body>
 </html>
