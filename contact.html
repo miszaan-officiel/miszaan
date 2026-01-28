@@ -15,6 +15,7 @@ html, body {
   margin: 0;
   width: 100%;
   height: 100%;
+  overflow-x: hidden; /* empêche tout scroll horizontal */
 }
 
 body {
@@ -74,7 +75,7 @@ nav.mobile {
   display: none;
   flex-direction: column;
   position: fixed;
-  top: 64px; /* juste sous le hamburger */
+  top: 64px;
   left: 0;
   width: 100%;
   padding: 0;
@@ -105,7 +106,7 @@ form {
   left: 50%;
   top: 62%;
   transform: translate(-50%, -50%);
-  width: 380px; /* inchangé desktop */
+  width: 380px;
   padding: 28px;
   display: flex;
   flex-direction: column;
@@ -157,7 +158,7 @@ button:hover {
   box-shadow: 0 0 10px rgba(255,255,255,0.4);
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE MOBILE */
 @media screen and (max-width: 768px) {
   nav.desktop {
     display: none;
@@ -167,10 +168,10 @@ button:hover {
   }
 
   form {
-    position: static;
+    position: relative; /* ne plus utiliser absolute pour éviter dépassement */
     transform: none;
-    width: 90%; /* réduit pour mobile */
-    margin: 150px auto 0 auto;
+    width: 90%; /* formulaire réduit et centré */
+    margin: 120px auto 0 auto;
   }
 }
 </style>
@@ -178,7 +179,7 @@ button:hover {
 </head>
 <body>
 
-<!-- MENU DESKTOP — inchangé -->
+<!-- MENU DESKTOP -->
 <nav class="desktop">
   <a href="index.html">Accueil</a>
   <a href="chants-noirs.html">Chants noirs</a>
