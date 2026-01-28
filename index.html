@@ -48,16 +48,25 @@ nav.desktop a:hover {
   transform: scale(1.05);
 }
 
-/* HAMBURGER MOBILE — à gauche, visible, couleur blanche */
+/* HAMBURGER MOBILE — à gauche, visible, blanc comme menu desktop */
 #hamburger {
   display: none; /* caché desktop */
   position: fixed;
   top: 24px;
   left: 32px;
-  font-size: 28px;
-  color: #ffffff; /* blanc exact comme les onglets */
-  z-index: 9999;
+  width: 36px;
+  height: 36px;
   cursor: pointer;
+  z-index: 9999;
+}
+
+#hamburger span {
+  display: block;
+  height: 4px;
+  margin: 6px 0;
+  background-color: #f2f2f2; /* blanc identique aux onglets */
+  border-radius: 2px;
+  transition: 0.3s;
 }
 
 /* MENU MOBILE — minimaliste et discret */
@@ -65,7 +74,7 @@ nav.mobile {
   display: none;
   flex-direction: column;
   position: fixed;
-  top: 60px; /* juste sous le hamburger */
+  top: 64px; /* juste sous le hamburger */
   left: 0;
   width: 100%;
   padding: 0;
@@ -73,7 +82,7 @@ nav.mobile {
 }
 
 nav.mobile a {
-  color: #ffffff; /* blanc comme desktop */
+  color: #f2f2f2; /* blanc identique desktop */
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.35em;
@@ -113,7 +122,11 @@ nav.mobile a:hover {
 </nav>
 
 <!-- HAMBURGER MOBILE -->
-<div id="hamburger">☰</div>
+<div id="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
 
 <!-- MENU MOBILE -->
 <nav class="mobile" id="mobileMenu">
